@@ -1,4 +1,8 @@
+ifeq ($(TARGET_BOARD_PLATFORM),clovertrail)
+libavcd_cflags_x86 += -DX86 -DDEFAULT_ARCH=D_ARCH_X86_SSE3
+else
 libavcd_cflags_x86 += -DX86 -msse4.2 -DDEFAULT_ARCH=D_ARCH_X86_SSE42
+endif
 
 libavcd_inc_dir_x86     +=  $(LOCAL_PATH)/decoder/x86
 libavcd_inc_dir_x86     +=  $(LOCAL_PATH)/common/x86

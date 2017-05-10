@@ -101,7 +101,11 @@ void ih264e_init_function_ptr(void *pv_codec)
 {
     codec_t *ps_codec = (codec_t *)pv_codec;
     ih264e_init_function_ptr_generic(ps_codec);
+#ifdef DEFAULT_ARCH
+    switch(DEFAULT_ARCH)
+#else
     switch(ps_codec->s_cfg.e_arch)
+#endif
     {
         case ARCH_X86_GENERIC:
             ih264e_init_function_ptr_generic(ps_codec);

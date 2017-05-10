@@ -375,6 +375,7 @@ void ih264_default_weighted_pred_chroma_sse42(UWORD8 *pu1_src1,
 /*                      Senthoor                                             */
 /*                                                                           */
 /*****************************************************************************/
+__attribute__ ((target("sse4.2")))
 void ih264_weighted_pred_luma_sse42(UWORD8 *pu1_src,
                                     UWORD8 *pu1_dst,
                                     WORD32 src_strd,
@@ -605,6 +606,7 @@ void ih264_weighted_pred_luma_sse42(UWORD8 *pu1_src,
 /*                      Senthoor                                             */
 /*                                                                           */
 /*****************************************************************************/
+__attribute__ ((target("sse4.2")))
 void ih264_weighted_pred_chroma_sse42(UWORD8 *pu1_src,
                                       UWORD8 *pu1_dst,
                                       WORD32 src_strd,
@@ -814,6 +816,7 @@ void ih264_weighted_pred_chroma_sse42(UWORD8 *pu1_src,
 /*                      Senthoor                                             */
 /*                                                                           */
 /*****************************************************************************/
+__attribute__ ((target("sse4.2")))
 void ih264_weighted_bi_pred_luma_sse42(UWORD8 *pu1_src1,
                                        UWORD8 *pu1_src2,
                                        UWORD8 *pu1_dst,
@@ -1101,6 +1104,7 @@ void ih264_weighted_bi_pred_luma_sse42(UWORD8 *pu1_src1,
 /*                      Senthoor                                             */
 /*                                                                           */
 /*****************************************************************************/
+__attribute__ ((target("sse4.2")))
 void ih264_weighted_bi_pred_chroma_sse42(UWORD8 *pu1_src1,
                                          UWORD8 *pu1_src2,
                                          UWORD8 *pu1_dst,

@@ -1717,6 +1717,7 @@ void ime_sub_pel_compute_sad_16x16_sse42(UWORD8 *pu1_src,
 *
 ******************************************************************************
 */
+__attribute__ ((target("sse4.2")))
 void ime_compute_satqd_16x16_lumainter_sse42(UWORD8 *pu1_src,
                                          UWORD8 *pu1_est,
                                          WORD32 src_strd,
